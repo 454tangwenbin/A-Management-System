@@ -20,52 +20,56 @@
     <body>
         <!--响应式导航条-->
         <nav class="navbar navbar-inverse navbar-fixed-top"><!--{{{-->
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand logo">某管理系统</a>
-                <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div id="navbar-collapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="###">首页</a></li>
-                    <li class="dropdown">
-                        <a href="###" data-toggle="dropdown">功能<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-header" href="###">业务功能</a></li>
-                            <li><a href="###">信息建立</a></li>
-                            <li><a href="###">信息查询</a></li>
-                            <li><a href="###">信息管理</a></li>
-                            <li><a class="divider" href="###"></a></li>
-                            <li><a class="dropdown-header" href="###">系统功能</a></li>
-                            <li><a href="###">设置</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="###">帮助</a></li>
-                </ul>
-                <form class="navbar-form navbar-right">
-                    <input class="form-control" type="text" placeholder="用户名" value="" name="user" />
-                    <input class="form-control" type="password" placeholder="密码" value="" name="passwd" />
-                    <button class="btn btn-default">登录</button>
-                </form>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand logo">某管理系统</a>
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="###">首页</a></li>
+                        <li class="dropdown">
+                            <a href="###" data-toggle="dropdown">功能<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">业务功能</li>
+                                <li><a href="###">信息建立</a></li>
+                                <li><a href="###">信息查询</a></li>
+                                <li><a href="###">信息管理</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">系统功能</li>
+                                <li><a href="###">设置</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="###">帮助</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <input class="form-control" type="text" placeholder="用户名..." value="" name="user" />
+                        <input class="form-control" type="password" placeholder="密码..." value="" name="passwd" />
+                        <button type="submit" class="btn btn-default">登录</button>
+                    </form>
+                </div>
             </div>
         </nav><!--}}}-->
 
         <!--内容-->
-        <div class="container content"><!--{{{-->
+        <div class="container-fluid"><!--{{{-->
             <div class="row text-center">
 
                 <!--左边栏导航-->
-                <div class="col-sm-2 navbar navbar-fixed-top sidebar hidden-xs"><!--{{{-->
-                    <ul class="nav text-left">
-                        <li class="bg-primary"><a href="###">首页</a></li>
-                        <ul class="nav sidebar-sub-nav">
-                            <li><a href="###">信息建立</a></li>
-                            <li><a href="###">信息查询</a></li>
-                            <li><a href="###">信息管理</a></li>
-                        </ul>
+                <div class="col-sm-2 sidebar hidden-xs"><!--{{{-->
+                    <ul class="nav nav-sidebar">
+                        <li class="active"><a href="###">首页</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="###">信息建立</a></li>
+                        <li><a href="###">信息查询</a></li>
+                        <li><a href="###">信息管理</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
                         <li><a href="###">设置</a></li>
                         <li><a href="###">帮助</a></li>
                     </ul>
@@ -78,12 +82,12 @@
                     <h1>管理控制台</h1>
 
                     <!--操作按钮-->
-                    <button class="btn btn-lg btn-default">操作1</button><!--{{{-->
-                    <button class="btn btn-lg btn-primary">操作2</button>
-                    <button class="btn btn-lg btn-success">操作3</button>
-                    <button class="btn btn-lg btn-info">操作4</button>
-                    <button class="btn btn-lg btn-warning">操作5</button>
-                    <button class="btn btn-lg btn-danger">操作6</button><!--}}}-->
+                    <button class="btn btn-lg btn-default btn-control">操作1</button><!--{{{-->
+                    <button class="btn btn-lg btn-primary btn-control">操作2</button>
+                    <button class="btn btn-lg btn-success btn-control">操作3</button>
+                    <button class="btn btn-lg btn-info btn-control">操作4</button>
+                    <button class="btn btn-lg btn-warning btn-control">操作5</button>
+                    <button class="btn btn-lg btn-danger btn-control">操作6</button><!--}}}-->
 
                     <div class="container-fluid content-details">
                         <div class="row">
@@ -97,9 +101,9 @@
                                     <div class="panel-body">
 
                                         <!--警告框-->
-                                        <div class="alert alert-success">提示您的订单（2014001）已经审批通过！</div>
-                                        <div class="alert alert-danger">提示您的订单（2014001）已经审批通过！</div>
-                                        <div class="alert alert-warning">提示您的订单（2013001）客户付款延迟！</div>
+                                        <div class="alert alert-success"><strong>提示</strong>您的订单（2014001）已经审批通过！</div>
+                                        <div class="alert alert-danger"><strong>提示</strong>您的订单（2014001）已经审批通过！</div>
+                                        <div class="alert alert-warning"><strong>提示</strong>您的订单（2013001）客户付款延迟！</div>
 
                                     </div>
                                 </div><!--}}}-->
@@ -126,9 +130,9 @@
 
                             </div>
 
-                            <!--清理浮动-->
-                            <div class="clearfix"></div>
+                        </div>
 
+                        <div class="row">
                             <div class="col-md-6">
 
                                 <!--面板3-->
@@ -141,21 +145,27 @@
                                         <!--表格-->
                                         <table class="table table-striped">
                                             <thead>
-                                                <th>#</th><th>产品</th><th>数量</th><th>总金额</th><th>业务员</th>
-                                            </tr>
+                                                <tr>
+                                                    <th>#</th><th>产品</th><th>数量</th><th>总金额</th><th>业务员</th>
+                                                </tr>
                                             <thead>
-                                                <td>1</td><td>Apple Macbook air</td><td>10</td><td>80000</td><td>王小贱</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td><td>Apple iPad air</td><td>20</td><td>65000</td><td>尹开花</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td><td>Apple Macbook pro</td><td>5</td><td>50000</td><td>刘老根</td>
-                                            </tr>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td><td>Apple Macbook air</td><td>10</td><td>80000</td><td>王小贱</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td><td>Apple iPad air</td><td>20</td><td>65000</td><td>尹开花</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td><td>Apple Macbook pro</td><td>5</td><td>50000</td><td>刘老根</td>
+                                                </tr>
+                                            <tbody>
                                         </table>
 
                                         <!--按钮-->
-                                        <button class="btn btn-primary order-btn">查看详细»</button>
+                                        <p>
+                                            <button class="btn btn-primary order-btn">查看详细»</button>
+                                        </p>
 
                                     </div>
                                 </div><!--}}}-->

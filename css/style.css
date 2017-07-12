@@ -13,27 +13,28 @@ body {
     margin-top: 0;
 }
 
-/*content*/
-.content {
-    width: 100%;
-}
-
 /*sidebar*/
 .sidebar {
-    height: 100%;
-    padding: 70px 0;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    padding: 20px 0;
+    border-right: 1px solid #eee;
     background: #ddd;
-    z-index: -1;
+    text-align: left;
     overflow: auto;
+    z-index: 0;
+}
+.nav-sidebar {
+    margin-bottom: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover { 
+    background: #428bca;
+    color: #fff;
 }
 .sidebar-sub-nav {
     padding: 20px 0;
-}
-.sidebar li {
-    padding-left: 5px;
-}
-.bg-primary a {
-    color: #fff;
 }
 
 /*h1*/
@@ -44,9 +45,13 @@ h1 {
     border-bottom: 1px solid #eee;
 }
 
+/*操作按钮*/
+.btn-control {
+    margin-bottom: 20px;
+}
+
 /*content-details*/
 .content-details {
-    margin-top: 20px;
     padding: 0;
 }
 
@@ -54,12 +59,6 @@ h1 {
 .work-ul li {
     margin-bottom: 20px;
 }
-
-/*panel-3*/
-.order-btn {
-    margin-bottom: 10px;
-}
-
 
 /*小屏幕（平板，大于等于768px）*/
 @media (min-width: 768px) {
